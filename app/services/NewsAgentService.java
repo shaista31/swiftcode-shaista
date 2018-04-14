@@ -31,7 +31,8 @@ public class NewsAgentService {
                    : response.get("result").get("parameters").get("keyword").asText() ;
 
 
-       } catch (Exception e) {
+       } catch (Exception e)
+       {
            e.printStackTrace();
        }
 

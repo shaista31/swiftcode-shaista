@@ -38,7 +38,7 @@ public class MessageActor extends UntypedActor {
     public void onReceive(Object message) throws Throwable {
         ObjectMapper objectMapper = new ObjectMapper();
         Message messageObject = new Message();
-        if (message instanceof String)
+        if (message instanceof String && message!="")
 
         {
 

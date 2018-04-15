@@ -37,16 +37,23 @@ public class MessageActor extends UntypedActor {
     @Override
     public void onReceive(Object message) throws Throwable {
         ObjectMapper objectMapper = new ObjectMapper();
-        if (message instanceof String) ;
+        Message messageObject = new Message();
+        if (message instanceof String)
+
         {
-            Message messageObject = new Message();
-            messageObject.text = message.toString();
+
+            messageObject.text = message. toString();
             messageObject.sender = Message.Sender.USER;
             out.tell(objectMapper.writeValueAsString(messageObject), self());
             String query = newsAgentService.getNewsAgentResponse("Find " + message, UUID.randomUUID()).query;
             feedResponse = feedService.getFeedByQuery(query); // to fetch the news
             messageObject.text = (feedResponse.title == null) ? "No results found" : "Showing results for: " + newsAgentResponse.query;
             messageObject.feedResponse = feedResponse;
+            messageObject.sender = Message.Sender.BOT;
+            out.tell(objectMapper.writeValueAsString(messageObject), self());
+        }
+        else {
+            messageObject.text = "Input is invalid";
             messageObject.sender = Message.Sender.BOT;
             out.tell(objectMapper.writeValueAsString(messageObject), self());
         }

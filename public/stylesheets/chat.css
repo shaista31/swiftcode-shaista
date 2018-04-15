@@ -1,25 +1,29 @@
-html body {
-    height: 100%;
-    padding: 0px;
-    margin: 0px;
-    overflow: hidden;
-}
+            html body {
+                height: 100%;
+                padding: 0px;
+                margin: 0px;
+                overflow: hidden;
+            }
 
-#message-pane {
-    background-color: #00faff;
-}
+            #message-pane {
+                background-image: url("https://4.bp.blogspot.com/-uhjF2kC3tFc/U_r3myvwzHI/AAAAAAAACiw/tPQ2XOXFYKY/s1600/Circles-3.gif");
+                background-repeat: no-repeat;
+                background-size: 100% 100%;
+                background-position: center center;
+            }
 
-#form-card {
-    margin: 0px;
-}
+            #form-card {
+                margin: 0px;
+                background-color: gray;
+            }
 
-.material-icons {
-    font-size: 40px !important;
-}
+            .material-icons {
+                font-size: 40px !important;
+            }
 
-.message-card {
-    max-width: 75%;
-    border-radius: 10px;
-    padding: 10px;
-    font-size: 14px;
-}
+            .message-card {
+                max-width: 75%;
+                border-radius: 10px;
+                padding: 10px;
+                font-size: 14px;
+            }
